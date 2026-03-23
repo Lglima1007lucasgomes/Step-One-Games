@@ -1,0 +1,206 @@
+<!Doctype html>
+	<head>
+		<meta charset="utf-8">
+		<meta lang="pt-br">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Step One Games</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body class="pagina-promocao">
+		<!--Barra Lateral-->
+	<nav class="navbar">
+		<h2>🎮 Step One Games</h2>
+	<div class="acoes">
+		<div id="carrinho">
+			🛒 carrinho: <span id="qtd">0</span>
+		<button onclick="finalizarCompra()" class="btn-finalizar">
+			Finalizar
+		</button>
+	</div>
+	<div class="menu">
+		<a href="cadastro.html">Cadastro</a>
+		<a href="promocao.html">Promoção</a>
+		<a href="sobre.html">Sobre</a>
+	</div>
+		<button onclick="toggleTema()" class="tema-btn">🌙 / ☀️</button>
+	</nav>
+	<div class="banner">
+		<img src="img/banner.jpg" class="banner-img">
+		<div class="banner-text">
+		<h1>🔥Promoção da Semana</h1>
+		<p>Jogos com até 50% off!</p>
+		</div>
+	</div>
+	<div class="filtros">
+		<button onclick="filtrar('todos')">Todos</button>
+		<button onclick="filtrar('rpg')">Rpg</button>
+		<button onclick="filtrar('mundo_aberto')">Mundo Aberto</button>
+		<button onclick="filtrar('esporte')">Esporte</button>
+		<button onclick="filtrar('fps')">Fps</button>
+		<button onclick="filtrar('notebooks')">Notebooks</button>
+		<button onclick="filtrar('periféricos')">Periféricos</button>
+		<button onclick="filtrar('corrida')">Corrida</button>
+	</div>
+		<!--Conteúdo principal-->
+			<div class="content">
+				<div class="jogos">
+					<div class="jogo mundo_aberto">
+						<img src="img/gta.jpg" alt="Jogo 1">
+						<h3>Grand Theft Auto V</h3>
+						<p class="preco">R$50.00</p>
+						<button class="comprar" onclick="adicionarCarrinho('GTA V', 50, 'img/gta.jpg')">Comprar</button>
+					</div>
+					<div class="jogo mundo_aberto">
+						<img src="img/red.jpg" alt="Jogo 2">
+						<h3>Red Dead Redemption 2</h3>
+						<p class="preco">R$200.00</p>
+						<button class="comprar" onclick="adicionarCarrinho('RED DEAD REDEMPTION 2', 200,'img/red.jpg')">Comprar</button>
+					</div>
+					<div class="jogo rpg">
+						<img src="img/ring.jpg" alt="Jogo 3">
+						<h3>Elden Ring</h3>
+						<p class="preco">R$275.00</p>
+						<button class="comprar" onclick="adicionarCarrinho('ELDEN RING', 275,'img/ring.jpg')">Comprar</button>
+					</div>
+					<div class="jogo rpg">
+						<img src="img/cyberpunk.jpg" alt="Jogo 4">
+						<h3>Cyberpunk 2077</h3>
+						<p class="preco">R$120.00</p>
+						<button class="comprar" onclick="adicionarCarrinho('CYBERPUNK 2077', 120,'img/cyberpunk.jpg')">Comprar</button>
+					</div>
+					<div class="jogo rpg">
+						<img src="img/witcher.jpg" alt="Jogo 5">
+						<h3>The Witcher 3</h3>
+						<p class="preco">R$50.00</p>
+						<button class="comprar" onclick="adicionarCarrinho('THE WITCHER 3', 50,'img/witcher.jpg')">Comprar</button>
+					</div>
+					<div class="jogo mundo_aberto">
+						<img src="img/assassins.jpg" alt="Jogo 6">
+						<h3>Assassin's Creed Shadows</h3>
+						<p class="preco">R$180.00</p>
+						<button class="comprar" onclick="adicionarCarrinho('ASSASSINS CREED SHADOWS', 180,'img/assassins.jpg')">Comprar</button>
+					</div>
+					<div class="jogo esporte">
+						<img src="img/fc.jpg" alt="Jogo 7">
+						<h3>Ea Sports Fc 26</h3>
+						<p class="preco">280.00</p>
+						<button class="comprar" onclick="adicionarCarrinho('EA SPORTS FC 26', 280,'img/fc.jpg')">Comprar</button>
+					</div>
+					<div class="jogo fps">
+						<img src="img/raiders.jpg" alt="Jogo 8">
+						<h3>Arc Raiders</h3>
+						<p class="preco">R$100.00</p>
+						<button class="comprar" onclick="adicionarCarrinho('ARC RAIDERS', 100,'img/raiders.jpg')">Comprar</button>
+					</div>
+					<div class="jogo rpg">
+						<img src="img/persona.jpg" alt="Jogo 9">
+						<h3>Persona 5 Royal</h3>
+						<p class="preco">R$90.00</p>
+						<button class="comprar" onclick="adicionarCarrinho('PERSONA 5 ROYAL', 90,'img/persona.jpg')">Comprar</button>
+					</div>
+					<div class="jogo mundo_aberto">
+						<img src="img/death.jpg" alt="Jogo 10">
+						<h3>Death Stranding 2</h3>
+						<p class="preco">R$300.00</p>
+						<button class="comprar" onclick="adicionarCarrinho('DEATH STRANDING', 300,'img/death.jpg')">Comprar</button>
+					</div>
+					<div class="jogo notebooks">
+						<img src="img/dell.jpg" alt="jogo 11">
+						<h3>Dell G15 Rtx 3050</h3>
+						<p class="preco">R$4.000</p>
+						<button class="comprar" onclick="adicionarCarrinho('DELL G15 RTX 3050',4000,'img/dell.jpg')">Comprar</button>
+					</div>
+					<div class="jogo periféricos">
+						<img src="img/placa.jpg" alt="jogo 12">
+						<h3>Placa de Video Nvidia Geforce Rtx 5060</h3>
+						<p class="preco">R$2.499</p>
+						<p class="comprar" onclick="adicionarCarrinho('PLACA DE VIDEO NVIDIA GEFORCE RTX 5060' ,2499,'img/placa.jpg')">Comprar</button>
+					</div>
+					<div class="jogo fps">
+						<img src="img/mw.jpg" alt="jogo 13">
+						<h3>Call of Duty Modern Warfare</h3>
+						<p class="preco">R$320.00</p>
+						<p class="comprar" onclick="adicionarCarrinho('CALL OF DUTY MODERN WARFARE',320,'img/mw.jpg')">Comprar</button>
+					</div>
+					<div class="jogo fps">
+						<img src="img/cod.jpg" alt="jogo 14">
+						<h3>Call of Duty Black Ops 7</h3>
+						<p class="preco">R$300.00</p>
+						<p class="comprar" onclick="adicionarCarrinho('CALL OF DUTY BLACK OPS 7',300,'img/cod.jpg')">Comprar</button>
+					</div>
+					<div class="jogo mundo_aberto">
+						<img src="img/dead.jpg" alt="jogo 15">
+						<h3>Red Dead Redemption</h3>
+						<p class="preco">R$125.00</p>
+						<p class="comprar" onclick="adicionarCarrinho('RED DEAD REDEMPTION',125,'img/dead.jpg')">Comprar</button>
+					</div>
+					<div class="jogo mundo_aberto">
+						<img src="img/gta_4.jpg" alt="jogo 16">
+						<h3>Grand Theft Auto IV</h3>
+						<p class="preco">R$79.00</p>
+						<p class="comprar" onclick="adicionarCarrinho('GRAND THEFT AUTO IV',79,'img/gta_4.jpg')">Comprar</button>
+					</div>
+					<div class="jogo mundo_aberto">
+						<img src="img/ghost.jpg" alt="jogo 17">
+						<h3>Ghost of Tsushima</h3>
+						<p class="preco">R$299.00</p>
+						<p class="comprar" onclick="adicionarCarrinho('GHOST OF TSUSHIMA',299,'img/ghost.jpg')">Comprar</button>
+					</div>
+					<div class="jogo mundo_aberto">
+						<img src="img/last.jpg" alt="jogo 18">
+						<h3>The Last Of Us Part 2 Remastered</h3>
+						<p class="preco">R$199.00</p>
+						<p class="comprar" onclick="adicionarCarrinho('THE LAST OF US PART 2 REMASTERED',199,'img/last.jpg')">Comprar</button>
+					</div>
+					<div class="jogo fps">
+						<img src="img/battle.jpg" alt="Jogo 19">
+						<h3>Battlefield 6</h3>
+						<p class="preco">R$299.00</p>
+						<p class="comprar" onclick="adicionarCarrinho('BATTLEFIELD 6',299,'img/battle.jpg')">Comprar</button>
+					</div>
+					<div class="jogo corrida">
+						<img src="img/forza.jpg" alt="jogo 20">
+						<h3>Forza Horizon 5</h3>
+						<p class="preco">R$150.00</p>
+						<p class="comprar" onclick="adicionarCarrinho('FORZA HORIZON 5',150,'img/forza.jpg')">Comprar</button>
+					</div>
+				</div>
+				</div>
+			</div>
+			<script src="js/script.js"></script>
+			<a href="https://wa.me/5554996641720?text=Ola%20quero%20saber%20mais%20informacoes" 
+   class="whatsapp-float" 
+   target="_blank">
+				<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+			</a>
+			<footer class="footer">
+			<div class="footer-container">
+				<div class="footer-col">
+					<h3>🎮 Step One Games</h3>
+					<p>Venha ser um gamer de verdade aqui.</p>
+				</div>
+				<div class="footer-col">
+					<h4>Links</h4>
+					<a href="index.html">Inicio</a>
+					<a href="promocao.html">Promoção</a>
+					<a href="cadastro.html">Cadastro</a>
+					<a href="sobre.html">Sobre</a>
+				</div>
+				<div class="footer-col">
+					<h4>Contato<h4>
+					<p>WhatsApp:5554996641720</p>
+					<p>📧 contato@steponegames.com</p>
+				</div>
+			</div>
+				<div class="footer-bottom">
+				<p>© 2026 Step One Games - Todos os direitos reservados - Desenvolvido por Lucas Gomes e Vinicius Santos</p>
+				</div>
+			</footer>		
+		</body>
+	</html>
+						
+						
+		
+	
+				
+				

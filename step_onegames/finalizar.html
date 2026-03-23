@@ -1,0 +1,55 @@
+<!Doctype html>
+	<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Finalizar Compra</title>
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<nav class="navbar">
+			<h2>🎮 Step One Games</h2>
+			<a href="index.html">⬅ Voltar</a>
+		</nav>
+		<div class="finalizar-container">
+			<h1>🛒 Seu Carrinho</h1>
+			<div id="lista"></div>
+			<div id="total"></div>
+			<button onclick="limparCarrinho()" class="limpar-btn">
+				Limpar Carrinho
+			</button>
+				<h2>Forma de Pagamento</h2>
+					<div class="pagamento">
+						<label>
+							<input type="radio" name="pagamento" value="debito" checked>
+								debito
+						</label>
+						<label>
+							<input type="radio" name="pagamento" value="credito">
+								Crédito
+						</label>
+						<label>
+							<input type="radio" name="pagamento" value="pix">
+								pix
+						</label>
+						<label>
+							<input type="radio" name="pagamento" value="boleto">
+								boleto
+						</label>
+					</div>
+					<div class="dados-cliente">
+						<input type="text" placeholder="Nome completo" id="nomeCliente">
+						<input type="text" placeholder="Endereço" id="enderecoCliente">
+						<input type="text" placeholder="E-mail" id="emailCliente">
+						<input type="text" placeholder="cpf" id="cpfCliente">
+						<input type="text" placeholder="cep" id="cepCliente">
+						<input type="text" placeholder="data de nascimento" id="nascimentoCliente">
+						<input type="text" placeholder="dados do cartão" id="cartaoCliente">
+					</div>				
+			<button class="finalizar-btn" onclick="confirmarCompra()">Finalizar Compra</button>
+		</div>
+	<script src="js/script.js"></script>
+	</body>
+</html>
+	
+		
